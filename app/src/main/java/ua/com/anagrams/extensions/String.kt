@@ -1,13 +1,10 @@
 package ua.com.anagrams.extensions
 
-import java.lang.StringBuilder
-import java.util.*
-
 fun String.anagrams(): String {
     var result = ""
 
 
-    var parser: List<String> = this.trim().split(" ")
+    val parser: List<String> = this.trim().split(" ")
     for (string in parser) {
 
         val buffResultList: MutableList<Char> = string.toMutableList()
@@ -18,24 +15,24 @@ fun String.anagrams(): String {
             var bufferChar: Char
             when {
 
-                !buffResultList.get(begin).isLetter() && !buffResultList.get(end).isLetter() -> {
+                !buffResultList[begin].isLetter() && !buffResultList[end].isLetter() -> {
                     begin++
                     end--
                 }
 
-                buffResultList.get(begin).isLetter() && !buffResultList.get(end).isLetter() -> {
+                buffResultList[begin].isLetter() && !buffResultList[end].isLetter() -> {
                     end--
                 }
 
-                !buffResultList.get(begin).isLetter() && buffResultList.get(end).isLetter() -> {
+                !buffResultList[begin].isLetter() && buffResultList[end].isLetter() -> {
                     begin++
                 }
 
 
-                buffResultList.get(begin).isLetter() && buffResultList.get(end).isLetter() -> {
-                    bufferChar = buffResultList.get(begin)
-                    buffResultList.set(begin, buffResultList.get(end))
-                    buffResultList.set(end, bufferChar)
+                buffResultList[begin].isLetter() && buffResultList[end].isLetter() -> {
+                    bufferChar = buffResultList[begin]
+                    buffResultList[begin] = buffResultList[end]
+                    buffResultList[end] = bufferChar
                     begin++
                     end--
                 }
