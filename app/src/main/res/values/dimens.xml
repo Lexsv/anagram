@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_size_16">16dp</dimen>
+    <dimen name="margin_size_18">18dp</dimen>
+    <dimen name="margin_size_20">20dp</dimen>
+    <dimen name="margin_size_25">25dp</dimen>
+    <dimen name="padding_size_16">16dp</dimen>
+    <dimen name="iv_input_result_250">250dp</dimen>
+</resources>

@@ -1,10 +1,17 @@
 package ua.com.anagrams
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
+
+import android.view.inputmethod.EditorInfo
+
 import kotlinx.android.synthetic.main.anagrams.*
 import ua.com.anagrams.extensions.anagrams
+
+
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.anagrams)
         initViewe(savedInstanceState)
 
-        bt_anagrams_revers.setOnClickListener {
+        ib_revers.setOnClickListener {
+            et_anagrams_revers.onEditorAction(EditorInfo.IME_ACTION_DONE)
             tv_anagrams_result.text =(et_anagrams_revers.text.toString().anagrams())
         }
     }

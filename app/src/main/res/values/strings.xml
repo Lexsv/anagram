@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Anagrams</string>
+    <string name="text_for_revers">Text for revers</string>
 </resources>
