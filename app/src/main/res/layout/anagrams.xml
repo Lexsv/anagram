@@ -32,46 +32,49 @@
                     android:src="@drawable/broccoli"/>
         </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/wr_et_anagrams_revers"
+        <RelativeLayout
+                android:id="@+id/anagrams_wr_et_ib"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                android:layout_marginLeft="@dimen/margin_size_16"
-                android:layout_marginTop="@dimen/margin_size_16"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/border"
-                app:layout_constraintEnd_toStartOf="@id/ib_revers"
-                android:background="@drawable/bg_ev_input_text">
-
-
-            <EditText
-                    android:id="@+id/et_anagrams_revers"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/text_for_revers"
-                    android:background="@null"
-                    android:paddingLeft="@dimen/padding_size_16"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <ImageButton
-                android:id="@+id/ib_revers"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/margin_size_20"
                 android:layout_marginLeft="@dimen/margin_size_16"
                 android:layout_marginRight="@dimen/margin_size_16"
-                android:layout_marginTop="@dimen/margin_size_18"
-                app:layout_constraintStart_toEndOf="@id/wr_et_anagrams_revers"
-                app:layout_constraintTop_toBottomOf="@+id/border"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:background="@drawable/bg_butt_revers"
-                android:src="@drawable/ic_autorenew"/>
+                app:layout_constraintTop_toBottomOf="@id/border"
+                android:background="@drawable/bg_ev_input_text">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/wr_et_anagrams_revers"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                <EditText
+                        android:id="@+id/et_anagrams_revers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_for_revers"
+                        android:background="@null"
+                        android:paddingLeft="@dimen/margin_size_10"
+                        android:paddingRight="@dimen/margin_size_40"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageButton
+                    android:id="@+id/ib_revers"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_butt_revers"
+                    android:src="@drawable/ic_autorenew"
+                    android:layout_alignEnd="@id/wr_et_anagrams_revers"
+                    android:layout_marginRight="@dimen/margin_size_5"
+                    android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
 
         <ImageView
                 android:id="@+id/iv_apple"
                 android:layout_width="@dimen/iv_input_result_250"
                 android:layout_height="@dimen/iv_input_result_250"
-                app:layout_constraintTop_toBottomOf="@id/wr_et_anagrams_revers"
+                app:layout_constraintTop_toBottomOf="@id/anagrams_wr_et_ib"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="@dimen/margin_size_20"
