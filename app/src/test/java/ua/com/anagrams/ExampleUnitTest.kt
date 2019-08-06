@@ -3,6 +3,7 @@ package ua.com.anagrams
 import org.junit.Test
 
 import org.junit.Assert.*
+import org.junit.runners.Parameterized
 import ua.com.anagrams.extensions.anagrams
 
 /**
@@ -14,13 +15,11 @@ class ExampleUnitTest {
     @Test
     fun anagram_test() {
 
-        assertEquals("dcba hgfe", "abcd efgh".anagrams())
+        assertEquals("wqd12da2", "add12qw2".anagrams())
         assertEquals("d1cba hgf!e", "a1bcd efg!h".anagrams())
+        assertEquals("1230 122! 455**", "1230 122! 455**".anagrams())
+        assertNull(null.anagrams())
     }
 
-    @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
-    }
 
 }

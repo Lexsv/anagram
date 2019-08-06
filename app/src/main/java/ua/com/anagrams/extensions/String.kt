@@ -1,7 +1,7 @@
 package ua.com.anagrams.extensions
 
 fun String?.anagrams(): String? {
-    if (this == null)return "null"
+    if (this == null)return null
     var result = ""
     val parser: List<String> = this.trim().split(" ")
 
