@@ -56,13 +56,15 @@
                         android:hint="@string/text_for_revers"
                         android:background="@null"
                         android:paddingLeft="@dimen/margin_size_10"
-                        android:paddingRight="@dimen/margin_size_40"/>
+                        android:paddingRight="@dimen/margin_size_40"
+                        android:inputType="text"
+                        android:imeOptions="actionDone"/>
             </com.google.android.material.textfield.TextInputLayout>
             <ImageButton
                     android:id="@+id/ib_revers"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/bg_butt_revers"
+                    android:background="@null"
                     android:src="@drawable/ic_autorenew"
                     android:layout_alignEnd="@id/wr_et_anagrams_revers"
                     android:layout_marginRight="@dimen/margin_size_5"

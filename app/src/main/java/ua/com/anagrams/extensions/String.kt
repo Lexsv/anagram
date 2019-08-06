@@ -1,10 +1,10 @@
 package ua.com.anagrams.extensions
 
-fun String.anagrams(): String {
+fun String?.anagrams(): String? {
+    if (this == null)return "null"
     var result = ""
-
-
     val parser: List<String> = this.trim().split(" ")
+
     for (string in parser) {
 
         val buffResultList: MutableList<Char> = string.toMutableList()
@@ -14,21 +14,16 @@ fun String.anagrams(): String {
         while (end - begin >= 0) {
             var bufferChar: Char
             when {
-
                 !buffResultList[begin].isLetter() && !buffResultList[end].isLetter() -> {
                     begin++
                     end--
                 }
-
                 buffResultList[begin].isLetter() && !buffResultList[end].isLetter() -> {
                     end--
                 }
-
                 !buffResultList[begin].isLetter() && buffResultList[end].isLetter() -> {
                     begin++
                 }
-
-
                 buffResultList[begin].isLetter() && buffResultList[end].isLetter() -> {
                     bufferChar = buffResultList[begin]
                     buffResultList[begin] = buffResultList[end]
@@ -40,6 +35,5 @@ fun String.anagrams(): String {
         }
         result += String(buffResultList.toCharArray()) + " "
     }
-
     return result.trim()
 }
