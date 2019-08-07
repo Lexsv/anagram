@@ -13,7 +13,7 @@
 
 
         <LinearLayout
-                android:id="@+id/border"
+                android:id="@+id/head_app"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_size_25"
@@ -22,12 +22,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:gravity="center">
             <ImageView
+                    android:id="@+id/bror_1"
                     style="@style/border_imag"
                     android:src="@drawable/broccoli"/>
             <ImageView
+
+                    android:id="@+id/bror_2"
                     style="@style/border_imag"
                     android:src="@drawable/broccoli"/>
             <ImageView
+                    android:id="@+id/bror_3"
                     style="@style/border_imag"
                     android:src="@drawable/broccoli"/>
         </LinearLayout>
@@ -41,7 +45,7 @@
                 android:layout_marginRight="@dimen/margin_size_16"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/border"
+                app:layout_constraintTop_toBottomOf="@id/head_app"
                 android:background="@drawable/bg_ev_input_text">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -90,7 +94,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iv_apple"
-                android:text="wqd12da2"
         />
 
 

@@ -25,9 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.anagrams)
-
         initViewe(savedInstanceState)
-
         et_anagrams_revers.setOnEditorActionListener { v, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE){
                 val inputManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager

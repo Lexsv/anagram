@@ -1,10 +1,8 @@
 package ua.com.anagrams
 
-import android.app.Activity
-import android.app.PendingIntent.getActivity
-import android.content.Context
+
 import android.content.pm.ActivityInfo
-import android.view.View
+
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.typeText
