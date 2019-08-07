@@ -15,6 +15,7 @@ class ExampleUnitTest {
     @Test
     fun anagram_test() {
 
+
         assertEquals("wqd12da2", "add12qw2".anagrams())
         assertEquals("d1cba hgf!e", "a1bcd efg!h".anagrams())
         assertEquals("1230 122! 455**", "1230 122! 455**".anagrams())
