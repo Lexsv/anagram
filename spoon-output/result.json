@@ -1,0 +1,73 @@
+{
+  "title": "Spoon Execution",
+  "started": 1565255236698,
+  "duration": 0,
+  "results": {
+    "MUENW18B09001463": {
+      "installFailed": true,
+      "installMessage": "Unable to install application APK.",
+      "deviceDetails": {
+        "model": "JSN-L21",
+        "manufacturer": "HUAWEI",
+        "version": "8.1.0",
+        "apiLevel": 27,
+        "language": "en",
+        "region": "US",
+        "isEmulator": false
+      },
+      "testResults": {},
+      "started": 1565255236700,
+      "duration": -1,
+      "exceptions": [
+        {
+          "className": "com.android.ddmlib.InstallException",
+          "message": "INSTALL_FAILED_TEST_ONLY: installPackageLI",
+          "elements": [
+            {
+              "className": "com.android.ddmlib.Device",
+              "fileName": "Device.java",
+              "line": 976,
+              "methodName": "installRemotePackage",
+              "isNative": false
+            },
+            {
+              "className": "com.android.ddmlib.Device",
+              "fileName": "Device.java",
+              "line": 883,
+              "methodName": "installPackage",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.SpoonDeviceRunner",
+              "fileName": "SpoonDeviceRunner.java",
+              "line": 197,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.SpoonRunner",
+              "fileName": "SpoonRunner.java",
+              "line": 183,
+              "methodName": "runTests",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.SpoonRunner",
+              "fileName": "SpoonRunner.java",
+              "line": 132,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.SpoonRunner",
+              "fileName": "SpoonRunner.java",
+              "line": 695,
+              "methodName": "main",
+              "isNative": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
