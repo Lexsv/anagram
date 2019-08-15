@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.anagrams)
         initViewe(savedInstanceState)
-        et_anagrams_revers.setOnEditorActionListener { v, actionId, _ ->
+        et_anagrams_revers.setOnEditorActionListener { v, actionId: Int, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE){
                 val inputManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 inputManager.hideSoftInputFromWindow(v.windowToken, 0)
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
             return@setOnEditorActionListener false
         }
-
+        
         ib_revers.setOnClickListener {
             et_anagrams_revers.onEditorAction(EditorInfo.IME_ACTION_DONE)
             tv_anagrams_result.text =(et_anagrams_revers.text.toString().anagrams())
