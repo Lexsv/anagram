@@ -3,3 +3,4 @@ libs/
 .idea/
 *.iml
 spoon-output/
+gradle.properties 
